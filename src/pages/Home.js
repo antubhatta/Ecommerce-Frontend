@@ -11,6 +11,9 @@ import styled from "styled-components";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllProducts } from "../features/products/productSlice";
 import { addToWishList } from "../features/products/productSlice";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const Home = () => {
   const productState = useSelector((state) => state?.product?.product);
@@ -31,89 +34,48 @@ const Home = () => {
     console.log(id);
     dispatch(addToWishList(id));
   };
+
   return (
     <>
       <HomeContainer>
         <Container class1="home-wrapper-1 py-5">
-          <div className="hero-container">
-            <div className="">
-              <div className="main-banner position-relative py-2">
-                <img
-                  src="/images/main-banner-1.jpg"
-                  className="img-fluid rounded-3"
-                  alt="main-banner-1"
-                />
-                <div className="main-banner-content position-absolute">
-                  <h4>Super Charged For Pros</h4>
-                  <h5>ipad S-13 pro</h5>
-                  <p>From $999 or 42.3/mo</p>
-                  <Link className="button">Buy Now</Link>
+          <div className="row d-flex flex-lg-row justify-content-center gap-10 py-2">
+            <div className="mrquee-inner-wrapper brand-wrapper rounded-3 col-12">
+              <Marquee className="d-flex rounded-3">
+                <div className="mx-2 w-100 rounded-3">
+                  <img
+                    height={400}
+                    src="/images/1.jpg"
+                    alt="brand-01"
+                    className="rounded-3"
+                  />
                 </div>
-              </div>
+                <div className="mx-2 w-100">
+                  <img height={400} src="/images/3055938.jpg" alt="brand-01" />
+                </div>
+                <div className="mx-2 w-100">
+                  <img
+                    height={400}
+                    src="/images/pexels-borko-manigoda-1778412.jpg"
+                    alt="brand-01"
+                  />
+                </div>
+                <div className="mx-2 w-100">
+                  <img
+                    height={400}
+                    src="/images/pexels-porapak-apichodilok-346748.jpg"
+                    alt="brand-01"
+                  />
+                </div>
+              </Marquee>
             </div>
-            <div className="">
-              <div
-                className="d-flex flex-wrap align-items-center justify-content-between
-                gap-10
-              "
-              >
-                <div className="small-banner position-relative py-2">
-                  <img
-                    src="/images/catbanner-01.jpg"
-                    className="img-fluid rounded-3"
-                    alt="catbanner-01"
-                  />
-                  <div className="small-banner-content position-absolute">
-                    <h4>Best Sells</h4>
-                    <h5>HP Paviloion</h5>
-                    <p>
-                      From $999 <br /> 42.3/month
-                    </p>
-                  </div>
-                </div>
-                <div className="small-banner position-relative py-2">
-                  <img
-                    src="/images/catbanner-02.jpg"
-                    className="img-fluid rounded-3"
-                    alt="catbanner-02"
-                  />
-                  <div className="small-banner-content position-absolute">
-                    <h4>Best Sells</h4>
-                    <h5>Smart Watch</h5>
-                    <p>
-                      From $999 <br /> 42.3/month
-                    </p>
-                  </div>
-                </div>
-                <div className="small-banner position-relative py-2">
-                  <img
-                    src="/images/catbanner-03.jpg"
-                    className="img-fluid rounded-3"
-                    alt="catbanner-03"
-                  />
-                  <div className="small-banner-content position-absolute">
-                    <h4>New Arrivals</h4>
-                    <h5>ipad S-13 pro</h5>
-                    <p>
-                      From $999 <br /> 42.3/month
-                    </p>
-                  </div>
-                </div>
-                <div className="small-banner position-relative">
-                  <img
-                    src="/images/catbanner-04.jpg"
-                    className="img-fluid rounded-3"
-                    alt="catbanner-04"
-                  />
-                  <div className="small-banner-content position-absolute py-2">
-                    <h4>New Arrivals</h4>
-                    <h5>Headphones</h5>
-                    <p>
-                      From $999 <br /> 42.3/month
-                    </p>
-                  </div>
-                </div>
-              </div>
+            <div className="main-banner position-relative py-2 col-12">
+              <img
+                height={100}
+                src="/images/8286086.jpg"
+                className="img-fluid rounded-3"
+                alt="main-banner-1"
+              />
             </div>
           </div>
         </Container>
@@ -138,7 +100,7 @@ const Home = () => {
           </div>
         </Container>
 
-        <Container class1="home-wrapper-2 py-5">
+        <Container class1="home-wrapper-2 py-3">
           <div className="row">
             <div>
               <div className="catagories-1">
@@ -203,8 +165,9 @@ const Home = () => {
             </div>
           </div>
         </Container>
+        
 
-        <Container class1="featured-wrapper home-wrapper-2 py-5">
+        <Container class1="featured-wrapper home-wrapper-2 py-3">
           <div className="row">
             <div className="col-12 ">
               <h3 className="blog-heading">Featured Collections</h3>
@@ -259,7 +222,9 @@ const Home = () => {
                             ></p>
                             <div className="d-flex justify-content-between align-items-center py-3">
                               <p className="price">$ {item?.price}</p>
-                              <p className="price">Reedim Coin : {item?.reedim ? item?.reedim : 0}</p>
+                              <p className="price">
+                                Reedim Coin : {item?.reedim ? item?.reedim : 0}
+                              </p>
                             </div>
                           </div>
                           <div className="action-bar position-absolute">
@@ -296,7 +261,7 @@ const Home = () => {
           </div>
         </Container>
 
-        <Container class1="famous-wrapper home-wrapper-2 py-5">
+        <Container class1="famous-wrapper home-wrapper-2 py-3">
           <div className="famous-card-container">
             <div className="">
               <div className="famous-card position-relative">
@@ -357,7 +322,7 @@ const Home = () => {
           </div>
         </Container>
 
-        <Container class1="special-wrapper home-wrapper-2 py-5">
+        <Container class1="special-wrapper home-wrapper-2 py-3">
           <div className="row">
             <div className="col-12">
               <h3 className="blog-heading">Special products</h3>
@@ -379,7 +344,7 @@ const Home = () => {
                         sold={item?.sold}
                         quantity={item?.quantity}
                         reedim={item?.reedim}
-                        imgUrl={item?.images[0].url}
+                        imgUrl={item?.images[0]?.url}
                       />
                     </div>
                   );
@@ -388,7 +353,7 @@ const Home = () => {
           </div>
         </Container>
 
-        <Container class1="popular-wrapper home-wrapper-2 py-5">
+        <Container class1="popular-wrapper home-wrapper-2 py-3">
           <div className="row">
             <div className="col-12">
               <h3 className="blog-heading">Our Popular Product</h3>
@@ -441,9 +406,11 @@ const Home = () => {
                                 __html: item?.description,
                               }}
                             ></p>
-                             <div className="d-flex justify-content-between align-items-center py-3">
+                            <div className="d-flex justify-content-between align-items-center py-3">
                               <p className="price">$ {item?.price}</p>
-                              <p className="price">Reedim Coin : {item?.reedim ? item?.reedim : 0}</p>
+                              <p className="price">
+                                Reedim Coin : {item?.reedim ? item?.reedim : 0}
+                              </p>
                             </div>
                           </div>
                           <div className="action-bar position-absolute">
@@ -515,7 +482,7 @@ const Home = () => {
           </div>
         </Container>
 
-        {/* <Container class1="blog-wrapper home-wrapper-2 py-5">
+        {/* <Container class1="blog-wrapper home-wrapper-2 py-3">
           <div className="row">
             <div className="col-12">
               <h3 className="blog-heading">Our Latest Blogs</h3>
@@ -542,6 +509,9 @@ const Home = () => {
 };
 
 const HomeContainer = styled.div`
+  .home-wrapper-1 {
+    background: linear-gradient(to right,rgb(255 255 255), rgb(202 202 202));
+  }
   .hero-container {
     display: grid;
     grid-template-columns: 1fr 1fr;

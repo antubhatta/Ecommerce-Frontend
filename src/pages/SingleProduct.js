@@ -59,7 +59,7 @@ const SingleProduct = () => {
     width: 800,
     height: 500,
     zoomWidth: 500,
-    img: productState?.images?.[0].url ? productState?.images?.[0].url : [],
+    img: productState?.images?.[0]?.url ? productState?.images?.[0]?.url : [],
   };
   const [orderProduct, setOrderProduct] = useState(true);
   const copyToClipboard = (text) => {

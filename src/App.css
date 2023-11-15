@@ -5,12 +5,12 @@
 }
 
 :root {
-  --color-primary: #122531;
-  --color-primary-2: #a3aeb5;
-  --color-primary-3: #0f1e28;
-  --color-primary-4: #1b3646;
-  --color-primary-5: #22586d;
-  --color-primary-6: #e9e8e2;
+  --color-primary: #11364d;
+  --color-primary-2: #B76E79;
+  --color-primary-3:#008080;
+  --color-primary-4: #29120065;
+  --color-primary-5: #6d226da9;
+  --color-primary-6: #dbdbdb99;
 }
 body {
   font-family: "Rubik", sans-serif;

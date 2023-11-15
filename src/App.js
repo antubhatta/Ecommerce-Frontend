@@ -22,8 +22,8 @@ import ShippingPolicy from "./pages/ShippingPolicy";
 import SingleProduct from "./pages/SingleProduct";
 import Cart from "./pages/Cart";
 import Checkout from "./pages/Checkout";
-import { PrivateRoutes } from "./pages/routing/ProtectedRoutes";
-import { OpenRoutes } from "./pages/routing/OpenRoutes";
+// import { PrivateRoutes } from "./pages/routing/ProtectedRoutes";
+// import { OpenRoutes } from "./pages/routing/OpenRoutes";
 function App() {
   return (
     <BrowserRouter>
@@ -38,17 +38,17 @@ function App() {
           <Route
             path="/cart"
             element={
-              <PrivateRoutes>
+            
                 <Cart />
-              </PrivateRoutes>
+            
             }
           />
           <Route
             path="/checkout"
             element={
-              <PrivateRoutes>
+             
                 <Checkout />
-              </PrivateRoutes>
+              
             }
           />
           <Route path="/blog" element={<Blog />} />
@@ -57,18 +57,18 @@ function App() {
           <Route
             path="/wishlist"
             element={
-              <PrivateRoutes>
+            
                 <Wishlist />
-              </PrivateRoutes>
+              
             }
           />
           <Route path="/login" element={<Login />} />
           <Route
             path="/signup"
             element={
-              <OpenRoutes>
+             
                 <Signup />
-              </OpenRoutes>
+           
             }
           />
           <Route path="/forget-password" element={<ForgetPassword />} />

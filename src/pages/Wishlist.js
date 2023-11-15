@@ -49,8 +49,8 @@ const Wishlist = () => {
                     <div className="product-cart-image bg-white">
                       <img
                         src={
-                          item?.images[0].url
-                            ? item?.images[0].url
+                          item?.images[0]?.url
+                            ? item?.images[0]?.url
                             : "images/watch.jpg"
                         }
                         className=" d-block mx-auto "

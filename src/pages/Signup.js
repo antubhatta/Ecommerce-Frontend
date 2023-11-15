@@ -27,10 +27,10 @@ const Signup = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const authState = useSelector((state) => state?.auth);
-  const imgState = useSelector((state) => state?.upload?.images);
+  // const imgState = useSelector((state) => state?.upload?.images);
   const formik = useFormik({
     initialValues: {
-      images: "",
+      // images: "",
       firstname: "",
       lastname: "",
       email: "",
@@ -45,18 +45,18 @@ const Signup = () => {
     },
   });
 
-  const img = [];
-  imgState?.forEach((i) => {
-    img.push({
-      public_id: i.public_id,
-      url: i.url,
-    });
-  });
+  // const img = [];
+  // imgState?.forEach((i) => {
+  //   img.push({
+  //     public_id: i.public_id,
+  //     url: i?.url,
+  //   });
+  // });
 
-  useEffect(() => {
-    formik.values.images = img;
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [img]);
+  // useEffect(() => {
+  //   formik.values.images = img;
+  //   // eslint-disable-next-line react-hooks/exhaustive-deps
+  // }, [img]);
 
   return (
     <>
@@ -72,7 +72,7 @@ const Signup = () => {
                 onSubmit={formik.handleSubmit}
                 className="d-flex flex-column gap-20"
               >
-                <div className="bg-grey border-1 p-5 text-center ">
+                {/* <div className="bg-grey border-1 p-5 text-center ">
                   <Dropzone
                     onDrop={(acceptedFiles) =>
                       dispatch(uploadImg(acceptedFiles))
@@ -105,7 +105,7 @@ const Signup = () => {
                         </div>
                       );
                     })}
-                </div>
+                </div> */}
                 <CustomInput
                   name="firstname"
                   type="text"

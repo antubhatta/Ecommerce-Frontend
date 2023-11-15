@@ -38,7 +38,7 @@ const Header = () => {
   return (
     <>
       <HeaderContainer>
-        <header className="header-top-strip py-3">
+        {/* <header className="header-top-strip py-3">
           <Container>
             <div className="row header-top">
               <div className="col-6">
@@ -56,7 +56,7 @@ const Header = () => {
               </div>
             </div>
           </Container>
-        </header>
+        </header> */}
         <header className="header-upper py-3">
           <Container>
             <div className="header-main">
@@ -82,8 +82,8 @@ const Header = () => {
                 </div>
               </div>
               <div className="header-side">
-                <div className="header-upper-link d-flex align-items-center justify-content-between">
-                  <div>
+                <div className="header-upper-link d-flex align-items-center justify-content-end gap-3">
+                  {/* <div>
                     <Link
                       to="/compare-product"
                       className="d-flex align-items-center gap-15 text-white"
@@ -93,7 +93,7 @@ const Header = () => {
                         Compare <br /> Product
                       </p>
                     </Link>
-                  </div>
+                  </div> */}
                   <div>
                     <Link
                       to="/wishlist"

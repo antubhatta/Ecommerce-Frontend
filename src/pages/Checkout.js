@@ -10,16 +10,16 @@ import * as yup from "yup";
 import axios from "axios";
 import { config } from "../utils/axiosConfig";
 
-const checkoutSchema = yup.object({
-  firstName: yup.string().required("FirstName is Required"),
-  lastName: yup.string().required("LastName is Required"),
-  address: yup.string().required("Address is Required"),
-  country: yup.string().required("country is Required"),
-  city: yup.string().required("City is Required"),
-  state: yup.string().required("State is Required"),
-  pincode: yup.number().required("Pincode is Required"),
-  other: yup.string().nullable(),
-});
+// const checkoutSchema = yup.object({
+//   firstName: yup.string().required("FirstName is Required"),
+//   lastName: yup.string().required("LastName is Required"),
+//   address: yup.string().required("Address is Required"),
+//   country: yup.string().required("country is Required"),
+//   city: yup.string().required("City is Required"),
+//   state: yup.string().required("State is Required"),
+//   pincode: yup.number().required("Pincode is Required"),
+//   other: yup.string().nullable(),
+// });
 
 const Checkout = () => {
   const dispatch = useDispatch();
@@ -71,7 +71,7 @@ const Checkout = () => {
       pincode: "",
       other: "",
     },
-    validationSchema: checkoutSchema,
+    // validationSchema: checkoutSchema,
     onSubmit: (values) => {
       setShippingInfo(values);
       setTimeout(() => {
@@ -437,7 +437,7 @@ const Checkout = () => {
               <div className="sub-total border-bottom py-4">
                 <div className="d-flex justify-content-between align-items-center">
                   <p>Sub Total</p>
-                  <p>${subtotal -100}</p>
+                  <p>${subtotal}</p>
                 </div>
                 <div className="d-flex justify-content-between align-items-center">
                   <p className="mb-0">Shipping</p>
@@ -447,7 +447,7 @@ const Checkout = () => {
 
               <div className="total d-flex justify-content-between align-items-center py-4">
                 <h4>Total</h4>
-                <h4>${subtotal }</h4>
+                <h4>${subtotal + 100}</h4>
               </div>
             </div>
           </div>
